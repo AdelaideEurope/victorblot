@@ -1,21 +1,38 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 55vh;
   padding: 150px 0;
-}
 
-.banner h1 {
+  h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
-  font-weight: bold;
+  font-weight: lighter;
+  text-align: center;
+  }
+
+  p {
+    font-family: $handwriting;
+    text-align: right;
+    width: 300px;
+    position: fixed;
+    right: 140px;
+    top: 250px;
+    color: white;
+    font-size: 24px;
+  }
+
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+.container-cards{
+  padding: 60px;
+  p {
+  margin-top: 16px;
+  margin-bottom: -2.5rem;
+  text-align: right;
+  }
 }
+

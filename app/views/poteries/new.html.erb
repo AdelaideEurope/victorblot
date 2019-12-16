@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Ajouter une poterie</h1>
+<%= simple_form_for @poterie do |f| %>
+  <%= f.input :name, :label => "Titre" %>
+  <%= f.input :description, :label => "Description" %>
+  <%= f.input :date, :label => "Date de réalisation" %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Ajouter la poterie", class: "btn btn-primary" %>
+<% end %>
+</div>
