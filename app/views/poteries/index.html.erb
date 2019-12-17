@@ -1,7 +1,26 @@
+<%= render 'shared/navbar' %>
 <div class="container">
-  <% @poteries.each do |poterie| %>
-  <%= poterie.name %>
-  <%= poterie.description %>
-  <%= poterie.date %>
-  <% end  %>
+  <div class="header-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1549293655-589f4200156b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+    <h1>Toutes mes réalisations</h1>
+  </div>
+
+  <div class="container-cards">
+    <div class="cards">
+      <% @poteries.each do |poterie| %>
+      <div class="card">
+        <%= link_to potery_path(poterie) do %>
+        <div class="card-category-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path poterie.photo.key, :width => "100%", :height => "200" %>);">
+          <p> <%= poterie.name %> </p>
+          <% if user_signed_in? %>
+              <%= link_to potery_path(poterie) do %><i class="far fa-eye"></i>
+            <% end %>
+              <%= link_to edit_potery_path(poterie) do %><i class="far fa-edit"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <% end  %>
+      </div>
+    <% end  %>
+    </div>
+  </div>
 </div>
