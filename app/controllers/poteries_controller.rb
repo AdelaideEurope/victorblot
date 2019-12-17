@@ -31,6 +31,12 @@ class PoteriesController < ApplicationController
     redirect_to potery_path(@poterie)
   end
 
+  def destroy
+    @poterie = Poterie.find(params[:id])
+    @poterie.destroy
+    redirect_to poteries_path
+  end
+
   private
 
   def poteries_params

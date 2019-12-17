@@ -1,1 +1,19 @@
-<%= @poterie.name %>
+<%= render 'shared/navbar' %>
+<div class="container">
+
+  <div class="arrow"><%= link_to poteries_path do %> <i class="fas fa-arrow-left"></i><% end %></div>
+  <div class="show-poterie">
+  <div class="image-show">
+  <%= cl_image_tag @poterie.photo.key, :width => "100%", :height => "500" %>
+  </div>
+  <div class="infos-show">
+    <% if user_signed_in? %>
+    <%= link_to edit_potery_path(@poterie) do %><i class="far fa-edit"></i>
+    <% end %>
+    <% end %>
+  <h1><%= @poterie.name %></h1>
+  <p><%= @poterie.description %> </p>
+  <div class="date-poterie">Date de fabrication : <%= @poterie.date.strftime("%m/%Y") %></div>
+  </div>
+  </div>
+</div>

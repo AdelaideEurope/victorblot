@@ -1,0 +1,37 @@
+.show-poterie {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-show {
+  flex: 0 0 auto;
+  width: 48%;
+}
+
+.infos-show {
+  border: 1px solid #D23333;
+  width: 48%;
+  position: relative;
+  h1 {
+    text-align: center;
+    margin-top: 16px;
+  }
+  p {
+    padding: 16px;
+    text-align: justify;
+  }
+  .date-poterie {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+  .fa-edit {
+    color: black;
+    opacity: 0.6;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+}
