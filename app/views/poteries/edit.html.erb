@@ -6,11 +6,11 @@
     <%= simple_form_for @poterie do |f| %>
     <%= f.input :name, :label => "Titre" %>
     <%= f.input :description, :label => "Description" %>
-    <%= f.input :date, :label => "Date de réalisation" %>
+    <%= f.input :date, as: :string, input_html: {type: :date}, :label => "Date de réalisation" %>
     <%= cl_image_tag @poterie.photo.key, :width => "60px", :height => "60px" %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Enregistrer les modifications", class: "btn btn-ghost" %>
   <% end %>
-    <%= link_to "Supprimer", potery_path(@poterie), method: :delete, data: { confirm: "Tu es sûr ?" } %>
+    <%= link_to "Supprimer la poterie", potery_path(@poterie), method: :delete, data: { confirm: "Tu es sûr ?" } %>
   </div>
 </div>

@@ -1,11 +1,13 @@
 <%= render 'shared/navbar' %>
 <div class="cadre-pages">
   <div class="container">
-  <h1>À propos</h1>
+  <h1>Un peu sur moi</h1>
   <div class="about">
+    <div class="photo-about"><%= image_tag "victor.png", class: "avatar-large"%></div>
+    <div class="text-pres">
     <p>Bonjour ! </p>
     <p>Moi, c'est Victor.</p>
-    <p>J'ai toujours adoré les travaux manuels et il y a maintenant 3 ans, j'ai commencé à suivre des cours de poterie avec Brigitte Conversin, à Lyon.</p>
+    <p>J'ai toujours adoré les travaux manuels et, il y a environ 3 ans, j'ai commencé à suivre des cours de poterie avec Brigitte Conversin, à Lyon.</p>
     <p>Avec elle, j'ai appris énormément de choses et j'ai pris du plaisir à imaginer des objets utiles et décalés.</p>
     <p>Sur ce site, je vous propose de découvrir ce que j'ai réalisé jusqu'à présent.</p>
     <p>N'hésitez pas à m'envoyer un petit <%= mail_to "victor_blot@hotmail.fr" do %>
@@ -13,4 +15,5 @@
 <% end %> pour me dire ce que vous en pensez ou me proposer de nouvelles idées, je suis toujours preneur !</p>
   </div>
   </div>
+</div>
 </div>

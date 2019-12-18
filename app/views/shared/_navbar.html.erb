@@ -8,6 +8,9 @@
 <div> <%= link_to "Accueil", root_path, class: "nav-link" %></div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+          <%= link_to "Un peu sur moi", about_path, class: "nav-link" %>
+        </li>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to "Ajouter une poterie", new_potery_path, class: "nav-link" %>
@@ -20,7 +23,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Connexion", new_user_session_path, class: "nav-link" %>
+          <%= link_to new_user_session_path, class: "nav-link" do %><i class="fas fa-sign-in-alt"></i><% end %>
         </li>
       <% end %>
     </ul>

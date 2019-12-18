@@ -1,11 +1,14 @@
 .cadre-pages {
-  margin-top: 80px;
+  margin-top: 90px;
+  padding: 0 25%;
 }
 
 .about {
-  border: 1px solid #D23333;
-  padding: 40px;
+  box-shadow: 0 0px 8px rgba(0,0,0,0.2);
+  padding: 60px 40px 60px 40px;
   margin-top: 40px;
+  position: relative;
+  text-align: justify;
   p {
     margin-bottom: 0rem;
   }
@@ -13,4 +16,10 @@
 
 .pages-connexion {
   margin: 100px 300px;
+}
+
+.photo-about {
+  position: absolute;
+  top: 16px;
+  right: 36px;
 }
